@@ -8,7 +8,7 @@ class EmailAddressParser
   @parser = []
   def initialize(email_addresses)
     e = email_addresses.split([\." "])
-    e.each {|address| @parser << address }
+    e.each {|address| @parser.push(address) }
   end
   def parse
     @parser
