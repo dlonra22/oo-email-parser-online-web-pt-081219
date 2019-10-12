@@ -7,7 +7,8 @@ class EmailAddressParser
   attr_accessor :email
   @parser = []
   def initialize(email_addresses)
-   email_addresses.split([\." "]).each {|address| @parser << address }
+    e = email_addresses.split([\." "])
+    e.each {|address| @parser << address }
   end
   def parse
     @parser
